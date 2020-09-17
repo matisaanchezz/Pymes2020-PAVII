@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { from } from 'rxjs';
+import { MockArticulosFamiliasService } from '../../services/mock-articulos-familias.service';
 import {
   ArticuloFamilia,
   ArticulosFamilias,
@@ -12,8 +12,16 @@ import {
 })
 export class ArticulosFamiliaComponent implements OnInit {
   titulo = 'Articulos Familias';
-  Items = ArticulosFamilias;
-  constructor() {}
+  Items: ArticuloFamilia[] = [];
+  constructor(private articulosFamiliasService: MockArticulosFamiliasService) {}
 
-  ngOnInit(): void {}
+  ngOnInit() {
+    this.GetFamiliasArticulos();
+  }
+
+  GetFamiliasArticulos() {
+    this.articulosFamiliasService.get().subscribe((res: ArticuloFamilia[]) => {
+      this.Items = res;
+    });
+  }
 }
