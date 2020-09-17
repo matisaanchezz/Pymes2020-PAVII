@@ -8,6 +8,8 @@ import { InicioComponent } from './Components/inicio/inicio.component';
 import { ArticulosFamiliaComponent } from './Components/articulos-familia/articulos-familia.component';
 import { ArticulosComponent } from './Components/articulos/articulos.component';
 
+import { HttpClientModule } from '@angular/common/http';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,7 +18,7 @@ import { ArticulosComponent } from './Components/articulos/articulos.component';
     ArticulosFamiliaComponent,
     ArticulosComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],
 })
