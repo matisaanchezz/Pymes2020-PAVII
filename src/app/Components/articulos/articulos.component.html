@@ -1,1 +1,245 @@
-<p>articulos works!</p>
+<div>
+  <div class="container">
+    <h3 id="headers">Articulos(Listado)</h3>
+    <br />
+    <form
+      id="fromfiltro"
+      method="GET"
+      style="color: white; border-radius: 15px; padding: 2%"
+      class="bg-dark px-4"
+    >
+      <div class="row mb-4">
+        <div class="col-sm-6">
+          <label for="NombreBuscar">Nombre:</label>
+          <input
+            class="form-control"
+            type="text"
+            id="NombreBuscar"
+            name="NombreBuscar"
+          />
+        </div>
+        <div class="col-sm-6">
+          <label for="Activo">Activo:</label>
+          <select name="Activo" class="form-control" id="Activo">
+            <option value=""></option>
+            <option value="true">Si</option>
+            <option value="false">No</option>
+          </select>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <button class="btn btn-primary mr-2" type="button">
+          <i class="fas fa-search"></i>
+          Buscar
+        </button>
+        <button class="btn btn-primary mr-2" type="button">
+          <i class="fas fa-plus"></i>
+          Agregar
+        </button>
+      </div>
+    </form>
+    <br />
+    <br /><br />
+    <table class="estilotabla table table-striped" style="border-radius: 15px">
+      <thead class="thead-dark">
+        <tr>
+          <th style="border-top-left-radius: 15px">Nombre</th>
+          <th>Precio</th>
+          <th>Stock</th>
+          <th style="border-top-right-radius: 15px">Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Accesorios</td>
+          <td>$400</td>
+          <td>24</td>
+          <td>
+            <button class="btn btn-sm btn-outline-primary" type="button">
+              <i class="fa fa-search" aria-hidden="true"></i>
+            </button>
+            <button class="btn btn-sm btn-outline-success" type="button">
+              <i class="fa fa-pencil" aria-hidden="true"></i>
+            </button>
+            <button class="btn btn-sm btn-outline-danger" type="button">
+              <i class="fa fa-times" aria-hidden="true"></i>
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <td>Parlantes</td>
+          <td>"$2480"</td>
+          <td>31</td>
+          <td>
+            <button class="btn btn-sm btn-outline-primary" type="button">
+              <i class="fa fa-search" aria-hidden="true"></i>
+            </button>
+            <button class="btn btn-sm btn-outline-success" type="button">
+              <i class="fa fa-pencil" aria-hidden="true"></i>
+            </button>
+            <button class="btn btn-sm btn-outline-danger" type="button">
+              <i class="fa fa-times" aria-hidden="true"></i>
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <td>Estereo</td>
+          <td>$4500</td>
+          <td>14</td>
+          <td>
+            <button class="btn btn-sm btn-outline-primary" type="button">
+              <i class="fa fa-search" aria-hidden="true"></i>
+            </button>
+            <button class="btn btn-sm btn-outline-success" type="button">
+              <i class="fa fa-pencil" aria-hidden="true"></i>
+            </button>
+            <button class="btn btn-sm btn-outline-success" type="button">
+              <i class="fa fa-check" aria-hidden="true"></i>
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <td>Borneras</td>
+          <td>$500</td>
+          <td>55</td>
+          <td>
+            <button class="btn btn-sm btn-outline-primary" type="button">
+              <i class="fa fa-search" aria-hidden="true"></i>
+            </button>
+            <button class="btn btn-sm btn-outline-success" type="button">
+              <i class="fa fa-pencil" aria-hidden="true"></i>
+            </button>
+            <button class="btn btn-sm btn-outline-danger" type="button">
+              <i class="fa fa-times" aria-hidden="true"></i>
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="row justify-content-between p-2" id="headers">
+      <div class="col-auto">Registros: 100</div>
+      <div class="col-auto">
+        <nav aria-label="Page navigation">
+          <ul class="pagination justify-content-center">
+            <li class="page-item disabled">
+              <a class="page-link" href="#" aria-label="Previous">
+                <span aria-hidden="true">&laquo;</span>
+                <span class="sr-only">Previous</span>
+              </a>
+            </li>
+            <li class="page-item active">
+              <a class="page-link" href="#">1</a>
+            </li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item">
+              <a class="page-link" href="#" aria-label="Next">
+                <span aria-hidden="true">&raquo;</span>
+                <span class="sr-only">Next</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="col-auto">
+        <button class="btn btn-sm btn-outline-primary" type="button">
+          <i class="fa fa-print" aria-hidden="true"></i>
+          Imprimir
+        </button>
+      </div>
+    </div>
+
+    <br />
+    <form
+      id="headers"
+      class="bg-dark px-4"
+      style="border-radius: 15px; padding: 2%"
+    >
+      <div class="row form-group">
+        <div class="col-sm-3">
+          <label for="Nombre">Nombre*</label>
+        </div>
+        <div class="col-sm-9">
+          <input type="text" class="form-control" id="Nombre" name="Nombre" />
+        </div>
+      </div>
+      <div class="row form-group">
+        <div class="col-sm-3">
+          <label for="Precio">Precio*</label>
+        </div>
+        <div class="col-sm-9">
+          <input type="number" class="form-control" id="Precio" name="Precio" />
+        </div>
+      </div>
+      <div class="row form-group">
+        <div class="col-sm-3">
+          <label for="Stock">Stock*</label>
+        </div>
+        <div class="col-sm-9">
+          <input type="number" class="form-control" id="Stock" name="Stock" />
+        </div>
+      </div>
+      <div class="row form-group">
+        <div class="col-sm-3">
+          <label for="CodigoBarra">Codigo de Barra*</label>
+        </div>
+        <div class="col-sm-9">
+          <input
+            type="text"
+            class="form-control"
+            id="CodigoBarra"
+            name="CodigoBarra"
+          />
+        </div>
+      </div>
+      <div class="row form-group">
+        <div class="col-sm-3">
+          <label for="Familia">Familia*</label>
+        </div>
+        <div class="col-sm-9">
+          <select name="Familia" id="Familia" class="form-control">
+            <option value=""></option>
+            <option value="cod1">Audio</option>
+            <option value="cod2">Accesorios</option>
+            <option value="cod3">Otros</option>
+          </select>
+        </div>
+      </div>
+      <div class="row form-group">
+        <div class="col-sm-3">
+          <label for="FechaAlta">Fecha de Alta*</label>
+        </div>
+        <div class="col-sm-9">
+          <input
+            type="date"
+            class="form-control"
+            id="FechaAlta"
+            name="FechaAlta"
+          />
+        </div>
+      </div>
+      <div class="row form-group">
+        <div class="col-sm-3">
+          <label for="Activo">Activo*</label>
+        </div>
+        <div class="col-sm-9">
+          <select name="Activo" id="Activo" class="form-control">
+            <option value=""></option>
+            <option value="true">Si</option>
+            <option value="false">No</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="row justify-content-center">
+        <button class="btn btn-primary mr-2" type="button">
+          <i class="fas fa-save"></i>
+          Grabar
+        </button>
+        <button class="btn btn-warning mr-2" type="button">
+          <i class="fas fa-undo"></i>
+          Cancelar
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
