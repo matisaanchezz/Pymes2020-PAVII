@@ -12,6 +12,7 @@ import { of } from 'rxjs';
 })
 export class ArticulosFamiliasService {
   resourceUrl: string;
+  //hago una inyeccion de dependencia
   constructor(private httpClient: HttpClient) {
     // la barra al final del resourse url es importante para los metodos que concatenan el
     // id del recurso (GetById, Put)

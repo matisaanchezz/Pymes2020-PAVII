@@ -15,6 +15,7 @@ export class ArticulosFamiliaComponent implements OnInit {
   titulo = 'Articulos Familias';
   Items: ArticuloFamilia[] = [];
   constructor(
+    // el mock es un servicio, q trabaja con inyeccion de dependencia
     //private articulosFamiliasService: MockArticulosFamiliasService
     // Consumimos los servicios reemplazando a mock
     private articulosFamiliasService: ArticulosFamiliasService
