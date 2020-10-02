@@ -10,6 +10,9 @@ import { ArticulosComponent } from './Components/articulos/articulos.component';
 //clase que me permite consumir datos de un servidor de WebAPI
 import { HttpClientModule } from '@angular/common/http';
 
+import { RouterModule } from '@angular/router';
+import { APP_BASE_HREF } from '@angular/common';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,8 +21,18 @@ import { HttpClientModule } from '@angular/common/http';
     ArticulosFamiliaComponent,
     ArticulosComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
-  providers: [],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule,
+    RouterModule.forRoot([
+      { path: '', redirectTo: '/inicio', pathMatch: 'full' },
+      { path: 'inicio', component: InicioComponent },
+      { path: 'articulos', component: ArticulosComponent },
+      { path: 'articulosfamilia', component: ArticulosFamiliaComponent },
+    ]),
+  ],
+  providers: [{ provide: APP_BASE_HREF, useValue: '/' }],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
