@@ -13,6 +13,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 import { APP_BASE_HREF } from '@angular/common';
 
+import { ReactiveFormsModule } from '@angular/forms';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,6 +33,7 @@ import { APP_BASE_HREF } from '@angular/common';
       { path: 'articulos', component: ArticulosComponent },
       { path: 'articulosfamilia', component: ArticulosFamiliaComponent },
     ]),
+    ReactiveFormsModule,
   ],
   providers: [{ provide: APP_BASE_HREF, useValue: '/' }],
   bootstrap: [AppComponent],
