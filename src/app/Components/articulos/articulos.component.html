@@ -32,8 +32,8 @@
           formControlName="Activo"
         >
           <!--<option value=""></option>
-            <option value="true">Si</option>
-            <option value="false">No</option>-->
+              <option value="true">Si</option>
+              <option value="false">No</option>-->
           <option *ngFor="let opt of OpcionesActivo" [ngValue]="opt.Id">
             ‌{{ opt.Nombre }}
           </option>
@@ -54,6 +54,7 @@
       </button>
     </div>
   </form>
+  <br /><br />
 
   <!-- Tabla de resutados de busqueda y Paginador-->
   <div id="divTablaResultados" *ngIf="AccionABMC == 'L' && Lista?.length > 0">

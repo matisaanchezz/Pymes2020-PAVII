@@ -1,41 +1,39 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { MenuComponent } from './Components/menu/menu.component';
-import { InicioComponent } from './Components/inicio/inicio.component';
-import { ArticulosFamiliaComponent } from './Components/articulos-familia/articulos-familia.component';
-import { ArticulosComponent } from './Components/articulos/articulos.component';
-//clase que me permite consumir datos de un servidor de WebAPI
-import { HttpClientModule } from '@angular/common/http';
-
+import { HttpClientModule } from "@angular/common/http";
 import { RouterModule } from '@angular/router';
-import { APP_BASE_HREF } from '@angular/common';
+import {APP_BASE_HREF} from '@angular/common';  
+import { ReactiveFormsModule } from "@angular/forms";
+import {NgbPaginationModule} from "@ng-bootstrap/ng-bootstrap";
 
-import { ReactiveFormsModule } from '@angular/forms';
+
+import { AppComponent } from './app.component';
+import { InicioComponent } from './components/inicio/inicio.component';
+import { ArticulosFamiliasComponent } from './components/articulos-familias/articulos-familias.component';
+import { MenuComponent } from './components/menu/menu.component';
+import { ArticulosComponent } from './components/articulos/articulos.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MenuComponent,
     InicioComponent,
-    ArticulosFamiliaComponent,
-    ArticulosComponent,
+    ArticulosFamiliasComponent,
+    MenuComponent,
+    ArticulosComponent
   ],
   imports: [
-    BrowserModule,
-    AppRoutingModule,
     HttpClientModule,
+    ReactiveFormsModule,
+    BrowserModule,
+    NgbPaginationModule,
     RouterModule.forRoot([
       { path: '', redirectTo: '/inicio', pathMatch: 'full' },
       { path: 'inicio', component: InicioComponent },
-      { path: 'articulos', component: ArticulosComponent },
-      { path: 'articulosfamilia', component: ArticulosFamiliaComponent },
-    ]),
-    ReactiveFormsModule,
+      { path: 'articulosfamilias', component: ArticulosFamiliasComponent },
+      { path: 'articulos', component: ArticulosComponent }
+    ])
   ],
-  providers: [{ provide: APP_BASE_HREF, useValue: '/' }],
-  bootstrap: [AppComponent],
+  providers: [ { provide: APP_BASE_HREF, useValue: "/" } ],
+  bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule { }

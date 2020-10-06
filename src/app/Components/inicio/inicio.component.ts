@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./inicio.component.css'],
 })
 export class InicioComponent implements OnInit {
-  titulo = 'Pymes 2020 - PAV II';
+  Titulo = 'Pymes 2020 - PAV II';
 
   constructor() {}
 

@@ -10,7 +10,7 @@ describe('workspace-project App', () => {
 
   it('should display welcome message', () => {
     page.navigateTo();
-    expect(page.getTitleText()).toEqual('pymes2020 app is running!');
+    expect(page.getTitleText()).toEqual('pymes app is running!');
   });
 
   afterEach(async () => {

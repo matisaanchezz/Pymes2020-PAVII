@@ -1,5 +1,5 @@
-<nav class="navbar navbar-expand-md fixed-top bg-dark navbar-dark">
-  <a class="navbar-brand" href="#">Pymes 2020</a>
+<nav class="navbar navbar-dark bg-dark navbar-expand-lg">
+  <nav class="navbar navbar-light bg-ligth text-white">PYMES</nav>
   <button
     class="navbar-toggler"
     type="button"
@@ -12,18 +12,23 @@
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="nav nav-pills" role="tablist">
+    <ul class="navbar-nav mr-auto">
       <li class="nav-item">
-        <a class="nav-link active" routerLink="/inicio"
+        <a class="nav-link" routerLink="/inicio"
           >Inicio <span class="sr-only">(current)</span></a
         >
       </li>
       <li class="nav-item">
-        <a class="nav-link" routerLink="/articulosfamilia">Artículos Familia</a>
+        <a class="nav-link" routerLink="/articulos" title="Gestionar Articulos"
+          >Articulos</a
+        >
       </li>
       <li class="nav-item">
-        <a class="nav-link" routerLink="/articulos" title="Gestionar Articulos"
-          >Artículos</a
+        <a
+          class="nav-link"
+          routerLink="/articulosfamilias"
+          title="Listado Articulos Familia"
+          >ArticulosFamilias</a
         >
       </li>
       <li class="nav-item dropdown">
@@ -54,20 +59,10 @@
         <a class="nav-link" href="#">Acerca de</a>
       </li>
     </ul>
-    <form class="form-inline ml-3 mt-2 mt-md-0">
-      <input
-        class="form-control mr-sm-2"
-        type="text"
-        placeholder="Qué busca..."
-        aria-label="Search"
-      />
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
-        Buscar
-      </button>
-    </form>
+
     <ul class="navbar-nav">
       <li class="nav-item">
-        <a class="nav-link" href="">Bienvenido: Matias Sánchez</a>
+        <a class="nav-link" href="">Bienvenido: Matías Sánchez</a>
       </li>
       <li class="nav-item"><a class="nav-link" href="">Cerrar Session</a></li>
     </ul>
